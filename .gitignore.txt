@@ -1,0 +1,55 @@
+
+
+# Virtual environment
+
+venv/
+env/
+.venv/
+
+# Python cache
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+
+.ipynb_checkpoints/
+
+# Common dataset formats
+
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.json
+
+# Model files
+
+/models/
+*.cbm
+
+# System files
+
+.DS_Store
+Thumbs.db
+
+# IDE / editor settings
+
+.vscode/
+.idea/
+
+# Logs
+
+*.log
+
+# Build artifacts
+
+dist/
+build/
+
+# Environment variables / secrets
+
+.env
+.env.*
