@@ -102,7 +102,7 @@ model.load_model("models/catboost_model.cbm")
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the Repository
 
@@ -185,9 +185,10 @@ Potential improvements include:
 
 This project was built through great teamwork and collaboration:
 
-* **Sakshitha** – Handled **data preprocessing**, ensuring data consistency, cleaning, and formatting.
-* **Noura** – Designed and fine-tuned the **CatBoost model**, focusing on hyperparameter optimization and performance analysis.
-* **Tom** – Developed the **Streamlit interface**, making model predictions and visualizations interactive and user-friendly.
+* **Sakshita**: Do the read me
+* **Noura** : Handled **data preprocessing**, ensuring data consistency, cleaning, and formatting.
+* **Noura** : Designed and fine-tuned the **CatBoost model**, focusing on hyperparameter optimization and performance analysis.
+* **Tom** and **Noura** : Developed the **Streamlit interface**, making model predictions and visualizations interactive and user-friendly.
 
 Together, the team created a seamless workflow that combines data preparation, model building, and deployment in one coherent system.
 
