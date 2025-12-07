@@ -19,7 +19,7 @@ CatBoost was chosen because it:
 
 The included Jupyter Notebook guides you through every step — from data exploration and preprocessing to model training, evaluation, and deployment.
 
----
+
 
 ##  Objectives
 
@@ -28,11 +28,11 @@ The included Jupyter Notebook guides you through every step — from data explor
 * Generate **meaningful visualizations and performance metrics**
 * Ensure the model is **reusable and easy to extend** in future projects
 
----
+
 
 ##  Repository Structure
 
-```
+
 .
 ├── notebook.ipynb          # Main notebook with the full ML workflow
 ├── data/                   # Dataset storage
