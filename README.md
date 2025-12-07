@@ -1,3 +1,5 @@
+Machine Learning Project
+
 📌 Project Overview
 
 This project presents a complete end-to-end machine learning pipeline built with CatBoost, a high-performance gradient boosting library for tabular data. The goal is to create a reliable, easy-to-follow workflow for predicting Airbnb rental prices based on various listing features.
@@ -8,15 +10,15 @@ This makes it an ideal dataset for regression modeling and for showcasing CatBoo
 
 CatBoost was chosen because it:
 
-Handles categorical variables seamlessly
+ - Handles categorical variables seamlessly
 
-Requires minimal data cleaning
+ - Requires minimal data cleaning
 
-Reduces overfitting through built-in regularization
+ - Reduces overfitting through built-in regularization
 
-Offers interpretability and visualization tools
+ - Offers interpretability and visualization tools
 
-Performs efficiently even on large tabular datasets
+ - Performs efficiently even on large tabular datasets
 
 The included Jupyter Notebook guides you through every step — from data exploration and preprocessing to model training, evaluation, and deployment.
 
