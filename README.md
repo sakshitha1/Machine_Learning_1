@@ -32,7 +32,7 @@ The included Jupyter Notebook guides you through every step — from data explor
 
 ##  Repository Structure
 
-
+```
 .
 ├── notebook.ipynb          # Main notebook with the full ML workflow
 ├── data/                   # Dataset storage
@@ -51,6 +51,7 @@ The included Jupyter Notebook guides you through every step — from data explor
 * Explore dataset structure and summary statistics
 * Identify categorical and numerical features
 * Handle missing values and check target distribution
+* **Define the target variable**: use the log of the rental price (`log(price)`) for modeling. This helps stabilize variance and improve model performance.
 
 ### 2. Preprocessing
 
@@ -59,6 +60,7 @@ Even though CatBoost needs minimal preprocessing, this step ensures data quality
 * Cleaning and formatting columns
 * Handling missing or inconsistent entries
 * Splitting data into training and validation sets
+* **Target transformation**: ensure the target is `log(price)` for training, and remember to exponentiate predictions to get actual rental prices for evaluation.
 
 ### 3. Model Development
 
@@ -79,7 +81,7 @@ Includes:
 
 Evaluation covers:
 
-* Metrics: **RMSE**, **MAE**, and **R² score**
+* Metrics: **RMSE**, **MAE**, and **R² score** (calculated on the exponentiated predictions to interpret in actual price terms)
 * Feature importance visualization
 * Training vs. validation loss analysis
 * Prediction vs. actual comparisons
@@ -99,7 +101,6 @@ from catboost import CatBoost
 model = CatBoost()
 model.load_model("models/catboost_model.cbm")
 ```
-
 
 
 ##  Installation & Setup
