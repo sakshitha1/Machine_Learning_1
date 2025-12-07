@@ -187,7 +187,7 @@ Potential improvements include:
 This project was built through great teamwork and collaboration:
 
 * **Sakshita**: Do the read me
-* **Noura** : Handled **data preprocessing**, ensuring data consistency, cleaning, and formatting.
+* **Noura and Sakshita** : Handled **data preprocessing**, ensuring data consistency, cleaning, and formatting.
 * **Noura** : Designed and fine-tuned the **CatBoost model**, focusing on hyperparameter optimization and performance analysis.
 * **Tom** and **Noura** : Developed the **Streamlit interface**, making model predictions and visualizations interactive and user-friendly.
 
