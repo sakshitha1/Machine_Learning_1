@@ -41,7 +41,7 @@ The included Jupyter Notebook guides you through every step — from data explor
 └── README.md               # Project documentation
 ```
 
----
+
 
 ##  Workflow Summary
 
@@ -100,7 +100,7 @@ model = CatBoost()
 model.load_model("models/catboost_model.cbm")
 ```
 
----
+
 
 ##  Installation & Setup
 
@@ -131,7 +131,7 @@ Or install manually:
 pip install catboost numpy pandas scikit-learn matplotlib
 ```
 
----
+
 
 ##  Using the Notebook
 
@@ -144,7 +144,7 @@ pip install catboost numpy pandas scikit-learn matplotlib
 3. Adjust dataset paths if needed
 4. Run the cells step by step — each section includes explanations and outputs
 
----
+
 
 ##  Outputs & Visualizations
 
@@ -156,7 +156,7 @@ The notebook generates:
 * **Sample predictions and error visualizations**
 * **Saved model files** ready for reuse
 
----
+
 
 ##  Customization Options
 
@@ -168,7 +168,7 @@ You can easily extend the project by adding:
 * **Streamlit or FastAPI deployment** for web use
 * **Automated feature engineering** steps
 
----
+
 
 ##  Future Enhancements
 
@@ -179,7 +179,7 @@ Potential improvements include:
 * Building a **training script** for CLI usage
 * Adding **Docker support** for reproducible environments
 
----
+
 
 ##  Team Contributions
 
@@ -192,7 +192,7 @@ This project was built through great teamwork and collaboration:
 
 Together, the team created a seamless workflow that combines data preparation, model building, and deployment in one coherent system.
 
----
+
 
 ##  Contributing
 
@@ -205,7 +205,7 @@ You can:
 
 Please submit a pull request or open an issue to collaborate.
 
----
+
 
 ##  License
 
