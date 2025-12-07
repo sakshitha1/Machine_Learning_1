@@ -1,219 +1,204 @@
-# Machine Learning Project
+📌 Project Overview
 
-## 📌 Project Overview
+This project presents a complete end-to-end machine learning pipeline built with CatBoost, a high-performance gradient boosting library for tabular data. The goal is to create a reliable, easy-to-follow workflow for predicting Airbnb rental prices based on various listing features.
 
-This repository contains a complete end-to-end machine learning workflow built using **CatBoost**, a state-of-the-art gradient boosting library optimized for performance on tabular datasets. The project focuses on creating a clean, reproducible, and well-documented pipeline for training, evaluating, and deploying a predictive model.
+The dataset used is the Airbnb Rent Prediction 2025
+ dataset from Kaggle, which includes details such as property location, type, number of rooms, host information, and other features that influence rental pricing.
+This makes it an ideal dataset for regression modeling and for showcasing CatBoost’s ability to handle mixed data types with minimal preprocessing.
 
-CatBoost is chosen specifically for its:
+CatBoost was chosen because it:
 
-* Exceptional handling of **categorical features**
-* Strong performance with minimal preprocessing
-* Built-in protection against overfitting
-* Easy-to-use API with powerful diagnostics
+Handles categorical variables seamlessly
 
-The included Jupyter notebook walks through every step, from loading the dataset to saving the final trained model.
+Requires minimal data cleaning
 
----
+Reduces overfitting through built-in regularization
 
-## 🎯 Objectives
+Offers interpretability and visualization tools
 
-* Build a reliable CatBoost model for classification/regression
-* Create a transparent and reproducible pipeline
-* Provide metrics, visualizations, and feature insights
-* Allow easy model reuse and future extension
+Performs efficiently even on large tabular datasets
 
----
+The included Jupyter Notebook guides you through every step — from data exploration and preprocessing to model training, evaluation, and deployment.
 
-## 📂 Repository Structure
+🎯 Objectives
 
-```
+Build a dependable CatBoost regression model for rent prediction
+
+Create a transparent and reproducible machine learning workflow
+
+Generate meaningful visualizations and performance metrics
+
+Ensure the model is reusable and easy to extend in future projects
+
+📂 Repository Structure
 .
-├── notebook.ipynb          # Main notebook with full ML workflow
-├── data/                   # Folder for datasets
-├── models/                 # Saved CatBoost model(s)
+├── notebook.ipynb          # Main notebook with the full ML workflow
+├── data/                   # Dataset storage
+├── models/                 # Saved CatBoost models
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
-```
 
----
+🧠 Workflow Summary
+1. Data Loading & Exploration
 
-## 🧠 Workflow Summary
+Import Airbnb data from Kaggle
 
-### 1. **Data Loading & Exploration**
+Explore dataset structure and summary statistics
 
-* Load dataset from CSV or other source
-* Initial exploratory data analysis (EDA):
+Identify categorical and numerical features
 
-  * Summary statistics
-  * Missing value inspection
-  * Feature type identification
-  * Target variable distribution
-* Automatic or manual detection of categorical columns
+Handle missing values and check target distribution
 
-### 2. **Preprocessing**
+2. Preprocessing
 
-CatBoost reduces the need for heavy preprocessing, but the pipeline ensures:
+Even though CatBoost needs minimal preprocessing, this step ensures data quality through:
 
-* Safe handling of missing values
-* Cleaning inconsistent or malformed entries
-* Optional transformations (encoding, normalization) for special features
-* Train/validation split for unbiased evaluation
+Cleaning and formatting columns
 
-### 3. **Model Development**
+Handling missing or inconsistent entries
 
-Depending on the task, either `CatBoostRegressor` or `CatBoostClassifier` is initialized with key parameters such as:
+Splitting data into training and validation sets
 
-* `iterations`
-* `learning_rate`
-* `depth`
-* `loss_function`
-* `eval_metric`
+3. Model Development
 
-Additional features:
+A CatBoostRegressor is used for rental price prediction with tunable parameters such as:
 
-* In-built GPU support (if available)
-* Early stopping for performance stability
-* Custom metric tracking
+iterations, learning_rate, depth, loss_function, and eval_metric
 
-### 4. **Model Training**
+Optional GPU acceleration and early stopping
 
-Training includes:
+4. Model Training
 
-* Logging iteration details
-* Learning curve visualization
-* Automatic handling of categorical features using CatBoost’s internal algorithm
+Includes:
 
-### 5. **Model Evaluation & Validation**
+Iterative logging of performance
 
-The notebook includes:
+Real-time visualization of learning curves
 
-* Metric calculation (Accuracy, RMSE, MAE, AUC, etc.)
-* Confusion matrix (classification)
-* Feature importance rankings
-* Loss curves for training vs. validation
-* Error analysis section for deeper insights
+Automatic handling of categorical variables
 
-### 6. **Model Saving & Reuse**
+5. Model Evaluation & Validation
 
-To save:
+Evaluation covers:
 
-```python
+Metrics: RMSE, MAE, and R² score
+
+Feature importance visualization
+
+Training vs. validation loss analysis
+
+Prediction vs. actual comparisons
+
+6. Model Saving & Reuse
+
+Save your model:
+
 model.save_model("models/catboost_model.cbm")
-```
 
-To load:
 
-```python
+Load it later:
+
 from catboost import CatBoost
 model = CatBoost()
 model.load_model("models/catboost_model.cbm")
-```
 
----
-
-## 📦 Installation & Setup
-
-### **1. Clone the repository**
-
-```bash
+⚙️ Installation & Setup
+1. Clone the Repository
 git clone <your-repo-url>
 cd <project-folder>
-```
 
-### **2. Create a virtual environment**
-
-```bash
+2. Create a Virtual Environment
 python -m venv venv
 source venv/bin/activate        # macOS/Linux
 venv\Scripts\activate           # Windows
-```
 
-### **3. Install dependencies**
-
-If `requirements.txt` is included:
-
-```bash
+3. Install Dependencies
 pip install -r requirements.txt
-```
 
-Otherwise:
 
-```bash
+Or install manually:
+
 pip install catboost numpy pandas scikit-learn matplotlib
-```
 
----
+▶️ Using the Notebook
 
-## ▶️ How to Use the Notebook
+Launch Jupyter Notebook:
 
-1. Launch Jupyter:
+jupyter notebook
 
-   ```bash
-   jupyter notebook
-   ```
-2. Open `notebook.ipynb`
-3. Configure dataset path if needed
-4. Run all cells sequentially
-   (Each block includes clear step-by-step explanations)
 
----
+Open notebook.ipynb
 
-## 📊 Outputs & Visualizations
+Adjust dataset paths if needed
 
-This project generates:
+Run the cells step by step — each section includes explanations and outputs
 
-* Feature importance plots
-* Train/validation loss curves
-* Performance metrics tables
-* Prediction samples
-* Saved trained models
+📊 Outputs & Visualizations
 
-These artifacts help evaluate model robustness and interpretability.
+The notebook generates:
 
----
+Feature importance plots
 
-## 🔧 Customization Options
+Training and validation loss curves
 
-You can easily extend the project to include:
+Evaluation metric summaries
 
-* Hyperparameter tuning via **GridSearch**, **RandomizedSearch**, or **Optuna**
-* Cross-validation with CatBoost’s CV module
-* Pipeline integration with scikit-learn
-* Deployment using:
+Sample predictions and error visualizations
 
-  * FastAPI
-  * Flask
-  * Streamlit dashboards
-* Automated preprocessing workflows
+Saved model files ready for reuse
 
----
+🔧 Customization Options
 
-## 📈 Future Directions
+You can easily extend the project by adding:
 
-Possible enhancements:
+Hyperparameter tuning (GridSearch, RandomizedSearch, Optuna)
 
-* Add additional models (LightGBM, XGBoost) for comparison
-* Implement automated EDA reports (ydata-profiling)
-* Build a training pipeline script for non-notebook execution
-* Add dockerization for reproducible deployment environments
+Cross-validation using CatBoost tools
 
----
+Integration with scikit-learn pipelines
 
-## 🤝 Contributing
+Streamlit or FastAPI deployment for web use
 
-Contributions are welcome. You can help by:
+Automated feature engineering steps
 
-* Improving documentation
-* Enhancing the model pipeline
-* Adding new visualizations or metrics
-* structuring scripts for production ML workflows
+📈 Future Enhancements
 
----
+Potential improvements include:
 
-## 📜 License
+Comparing CatBoost with XGBoost or LightGBM
 
-This project is open for personal and educational use.
-You may modify and extend it freely.
+Generating automated EDA reports
 
----
+Building a training script for CLI usage
 
+Adding Docker support for reproducible environments
+
+👥 Team Contributions
+
+This project was built through great teamwork and collaboration:
+
+Sakshitha – Handled data preprocessing, ensuring data consistency, cleaning, and formatting.
+
+Noura – Designed and fine-tuned the CatBoost model, focusing on hyperparameter optimization and performance analysis.
+
+Tom – Developed the Streamlit interface, making model predictions and visualizations interactive and user-friendly.
+
+Together, the team created a seamless workflow that combines data preparation, model building, and deployment in one coherent system.
+
+🤝 Contributing
+
+Contributions are welcome!
+You can:
+
+Improve documentation or add new features
+
+Enhance the model or introduce new visualizations
+
+Extend deployment options or EDA capabilities
+
+Please submit a pull request or open an issue to collaborate.
+
+📜 License
+
+This project is released for personal and educational use.
+Feel free to modify, extend, and build upon it — with credit to the original contributors
